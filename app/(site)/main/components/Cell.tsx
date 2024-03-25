@@ -1,21 +1,21 @@
 interface CellProps {
   children: any;
   width: number;
-  fontSize?: string;
-  allignment?: string;
+  fontSize?: "smaller";
+  alignment?: string;
 }
 
 export default function Cell({
   children,
   width,
   fontSize,
-  allignment,
+  alignment,
 }: CellProps) {
   const cellWidth = `${width}%`;
   const style = { width: cellWidth };
 
   let classes = "h-full flex items-center border-r-2 border-black ";
-  switch (allignment) {
+  switch (alignment) {
     case "start":
       classes += "justify-start pl-[10px] ";
       break;
@@ -27,7 +27,7 @@ export default function Cell({
       break;
   }
 
-  classes += fontSize == "smaller" ? "text-md" : "text-xl";
+  classes += fontSize == "smaller" ? "text-md" : "text-2xl";
 
   // using ${width}% in the classes sometimes the % width is not applied
   // Tailwind literally doesn't apply the class

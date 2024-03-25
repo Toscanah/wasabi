@@ -8,34 +8,35 @@ export default function AsportoTavolo() {
     rows.push(
       <Row>
         <Cell width={15}>20:00</Cell>
-        <Cell width={50} allignment={"start"} fontSize={"smaller"}>
-          ALESSANDRO
+        <Cell width={45} alignment={"start"} fontSize={"smaller"}>
+          ALESSANDROOOOOOOOOOO CECCHINIIIIIIIIIIIIIIIIII
         </Cell>
-        <Cell width={15}>21:00</Cell>
-        <Cell width={20} allignment={"end"}>
-          999.99 E
+        <Cell width={20}>21:00</Cell>
+        <Cell width={20} alignment={"end"}>
+          999.99 €
         </Cell>
       </Row>
     );
   }
 
   return (
-    <div className="flex flex-col justify-evenly p-5 gap-3">
-      <div className="bg-black text-white flex items-center justify-center h-10">
-        <p>Asporto / Tavolo</p>
+    <div className="flex flex-col justify-between h-screen p-4">
+      <div className="bg-black text-white flex items-center justify-center h-12 rounded-sm">
+        <p className="text-3xl">Asporto / Tavolo</p>
       </div>
 
-      <div className="flex justify-around">
-        <Badge>Tutte</Badge>
-        <Badge>Preparando</Badge>
-        <Badge>Ritirate</Badge>
+      {/* TODO: al 99% il badge diventa un component user client per farli funzionare*/}
+      <div className="flex justify-around w-full">
+        <Badge>Tutte (00)</Badge>
+        <Badge>Preparando (00)</Badge>
+        <Badge>Ritirate (00)</Badge>
       </div>
 
-      <div className="overflow-auto h-[502px]">
+      <div className="overflow-auto h-[602px]">
         <Row>
           <Cell width={15}>ORA</Cell>
-          <Cell width={50}>CLIENTE</Cell>
-          <Cell width={15}>RITIRO</Cell>
+          <Cell width={45}>CLIENTE</Cell>
+          <Cell width={20}>RITIRO</Cell>
           <Cell width={20}>TOTALE</Cell>
         </Row>
 

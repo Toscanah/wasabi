@@ -4,8 +4,8 @@ import Domicilio from "./Domicilio";
 
 export default function Main() {
   return (
-    <div className="flex w-full  justify-between h-screen">
-      <div className=" w-[36%]">
+    <div className="flex w-full justify-between h-screen">
+      <div className="flex flex-col justify-between w-[36%] h-screen">
         <FormNominativi />
         <AsportoTavolo />
       </div>
